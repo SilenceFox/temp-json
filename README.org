@@ -1,0 +1,40 @@
+* json-gen
+
+A Clojure library designed to ... well, that part is up to you.
+
+** Usage
+
+Currently the API is lacking and all is hard coded, if you are on Emacs, please run these code blocks with ~C-c C-c~ to get up and running
+#+begin_src emacs-lisp
+  (compile "lein run")
+#+end_src
+This should output =output.json= in the root folder of the project. Please check if you have [[https://clojure.org/guides/install_clojure][Clojure]] installed on your OS, also [[https://leiningen.org/][Lein]].
+
+*** Developing
+If you are on Emacs and wish to develop this application further, use Cider =M-x package-install RET cider RET=.
+With Cider installed just run =M-x cider-jack-in-clj.=
+#+begin_src emacs-lisp
+  (package-install cider)
+
+  (if (null (require 'cidr nil t))
+      (message "Not installed, please install CIDER")
+      (progn
+        (find-file "./src/json_gen/core.clj")
+        (cider-jack-in-clj)))
+#+end_src
+You can also C-c C-c this code block for a somewhat automatic approach.
+If you never worked with a REPL, you can run =M-x cider-load-buffer= or =C-c C-k= on the SRC buffer.
+** License
+
+Copyright © 2024 FIXME
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0 which is available at
+http://www.eclipse.org/legal/epl-2.0.
+
+This Source Code may also be made available under the following Secondary
+Licenses when the conditions for such availability set forth in the Eclipse
+Public License, v. 2.0 are satisfied: GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or (at your
+option) any later version, with the GNU Classpath Exception which is available
+at https://www.gnu.org/software/classpath/license.html.

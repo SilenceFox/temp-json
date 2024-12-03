@@ -1,4 +1,5 @@
 (ns json-gen.core
+  (:gen-class)
   (:require [cheshire.core :as cheshire]
             [hiccup.core :refer [html]]))
 
